@@ -2,5 +2,5 @@ FROM python:3.8-slim-buster
 MAINTAINER tyza66
 WORKDIR /app
 COPY . .
-RUN pip3 install flask
+RUN pip install flask -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 CMD ["python3","app.py"]
